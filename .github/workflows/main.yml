@@ -6,7 +6,7 @@ on:
       branch:
         description: 'Branch to deploy'
         required: true
-        default: 'hk_push'
+        default: 'Deploy'
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout main branch
         uses: actions/checkout@v2
         with:
-          ref: 'refs/heads/hk_push'
+          ref: 'refs/heads/Deploy'
 
       - name: Heroku Deploy
         uses: akhileshns/heroku-deploy@v3.12.12
